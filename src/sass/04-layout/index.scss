@@ -70,6 +70,11 @@
 .p-social__behance,
 .p-social__resume{
     border-right: 1px solid $white;
+
+    @media(max-width: 568px){
+        border-right: none;
+        border-bottom: 1px solid $white;
+    }
 }
 
 .p-social__behance{

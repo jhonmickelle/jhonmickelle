@@ -223,6 +223,13 @@ body {
 .p-social__resume {
   border-right: 1px solid #F2F2F2;
 }
+@media (max-width: 568px) {
+  .p-social__behance,
+.p-social__resume {
+    border-right: none;
+    border-bottom: 1px solid #F2F2F2;
+  }
+}
 
 .p-social__behance {
   border-radius: 15px 0px 0px 15px;

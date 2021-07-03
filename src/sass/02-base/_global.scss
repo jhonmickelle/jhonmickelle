@@ -1,0 +1,45 @@
+.container{
+    margin: 50px 165px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @media(max-width: 992px){
+        margin: 0 50px;
+    }
+
+    @media(max-width: 768px){
+        margin: 0 50px;
+        padding: 0px;
+    }
+
+    @media(max-width: 568px){
+        margin: 0 30px;
+    }
+
+    // padding-right: 15px;
+    // padding-left: 15px;
+    // margin-right: auto;
+    // margin-left: auto;
+
+    // @media(min-width: 768px) {
+    //     .pt-container {
+    //     width: 750px;    
+    //     }
+    // }
+    // @media(min-width: 992px) {
+    //     .pt-container {
+    //         width: 970px;
+    //     }
+    // }
+    // @media(min-width: 1200px) {
+    //     .pt-container {
+    //         width: 1170px;
+    //     }
+    // }
+}
+
+body{
+    background-image: url('/build/images/body-background.png');
+    background-size: contain;
+    background-repeat: repeat;
+}

@@ -1,0 +1,60 @@
+.p-name{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: $primary;
+    letter-spacing: 1px;
+    @include fontStyle($font-family, 38px, $bold);
+
+    @media(max-width: 620px){
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+.p-job-title{
+    color: $black;
+    letter-spacing: 1px;
+    @include fontStyle($font-family, 20px, $light);
+
+    @media(max-width: 620px){
+        font-size: 18px;
+        text-align: center;
+    }
+
+    @media(max-width: 468px){
+        font-size: 16px;
+    }
+}
+
+.p-social__title{
+    color: $black;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-transform: capitalize;
+    @include fontStyle($font-family, 14px, $light);
+   
+}
+
+.pt-work__text{
+    text-align: center;
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include fontStyle($font-family, 24px, $medium);
+
+    @media(max-width: 620px){
+        font-size: 18px;
+    }
+
+    @media(max-width: 468px){
+        font-size: 16px;
+    }
+}
+
+.pt-work__role-item{
+    text-align: center;
+    padding: 20px;
+    color: $primary;
+    letter-spacing: 1px;
+    @include fontStyle($font-family, 14px, $regular);
+}

@@ -1,19 +1,19 @@
-.container{
-    margin: 50px 165px;
+.j-container{
+    margin: 0px 165px;
     padding-right: 15px;
     padding-left: 15px;
 
     @media(max-width: 992px){
-        margin: 30px 50px;
+        margin: 0px 50px;
     }
 
     @media(max-width: 768px){
-        margin: 30px 50px;
+        margin: 0px 50px;
         padding: 0px;
     }
 
     @media(max-width: 568px){
-        margin: 30px 30px;
+        margin: 0px 30px;
     }
 
     // padding-right: 15px;
@@ -42,4 +42,22 @@ body{
     background-image: url('/build/images/body-background.png');
     background-size: contain;
     background-repeat: repeat;
+}
+
+.j-button--resume{
+    border: 1px solid $primary;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $primary;
+    // background: $pure-white;
+    @include fontStyle($font-family, 16px, $medium);
+    transition: 200ms ease-in-out;
+
+    &:hover{
+        background: $primary;
+        color: $white;
+    }
 }

@@ -1,78 +1,148 @@
-.p-name{
-    margin-top: 30px;
+.j-top__subtop-text{
+    color: $black;
+    letter-spacing: 1px;
     margin-bottom: 10px;
+    @include fontStyle($font-family, 16px, $medium);
+
+    @media(max-width: 520px){
+        font-size: 14px;
+    }
+}
+
+.j-top__name{
     color: $primary;
     letter-spacing: 1px;
-    @include fontStyle($font-family, 38px, $bold);
+    text-transform: uppercase;
+    @include fontStyle($font-family, 80px, $bold);
 
-    @media(max-width: 620px){
-        font-size: 28px;
-        text-align: center;
+    @media(max-width: 700px){
+        font-size: 60px;
+    }
+
+    @media(max-width: 520px){
+        font-size: 40px;
     }
 }
 
-.p-job-title{
+.j-top__about-me{
     color: $black;
     letter-spacing: 1px;
-    @include fontStyle($font-family, 20px, $light);
-
-    @media(max-width: 620px){
-        font-size: 18px;
-        text-align: center;
-    }
-
-    @media(max-width: 468px){
-        font-size: 16px;
-    }
-}
-
-.p-social__title{
-    color: $black;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    text-transform: capitalize;
-    @include fontStyle($font-family, 14px, $light);
-   
-}
-
-.pt-work__text{
+    max-width: 510px;
     text-align: center;
+    line-height: 170%;
+    margin-top: 15px;
+    @include fontStyle($font-family, 16px, $light);
+
+    @media(max-width: 520px){
+        font-size: 14px;
+    }
+}
+
+.j-section--title{
     color: $black;
     text-transform: uppercase;
     letter-spacing: 1px;
-    @include fontStyle($font-family, 24px, $medium);
-
-    @media(max-width: 620px){
-        font-size: 18px;
-    }
-
-    @media(max-width: 468px){
-        font-size: 16px;
-    }
+    margin-bottom: 30px;
+    @include fontStyle($font-family, 28px, $medium);
 }
 
-.pt-work__role-item{
+// Work
+.j-work__title{
+    margin-bottom: 60px;
     text-align: center;
-    padding: 20px;
-    color: $primary;
     letter-spacing: 1px;
-    @include fontStyle($font-family, 14px, $regular);
+    text-transform: uppercase;
+    @include fontStyle($font-family, 28px, $medium);
 }
 
-.p-footer__copyright{
-    @media(max-width: 500px){
-        order: 2;
+.j-work__name{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: $primary;
+    @include fontStyle($font-family, 20px, $medium);
+}
+
+.j-work__about{
+    max-width: 467px;
+    color: $black;
+    letter-spacing: 0.5px;
+    line-height: 170%;
+    @include fontStyle($font-family, 16px, $light);
+}
+
+.j-work__role--item{
+    color: $black;
+    letter-spacing: 1px;
+    @include fontStyle($font-family, 14px, $light);
+
+    &:first-child{
+        margin-right: 20px;
     }
 }
 
-.p-footer__copyright,
-.p-footer__email{
-    padding: 25px 0px;
+
+// Experience & Skill
+.j-experience__work{
+    color: $black;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    line-height: 170%;
+    @include displayFlex(center, flex-start, column);
+    @include fontStyle($font-family, 18px, $medium);
+
+    span{
+        color: $primary;
+    }
+}
+
+.j-experience__year{
+    color: $black;
+    @include fontStyle($font-family, 13px, $light);
+}
+
+
+.j-experience__item{
+    color: $black;
+    letter-spacing: 1px;
+    @include fontStyle($font-family, 14px, $light);
+}
+
+// Hire Me
+.j-hire__sentence{
+    text-align: center;
+    max-width: 348px;
+    letter-spacing: 1px;
+    line-height: 170%;
+    color: $black;
+    margin-bottom: 30px;
+    @include fontStyle($font-family, 16px, $light);
+}
+
+.j-footer__copyright,
+.j-footer__email{
     color: $white;
     letter-spacing: 1px;
-    @include fontStyle($font-family, 12px, $light);
+    @include fontStyle($font-family, 16px, $light);
 }
 
-.p-footer__email{
-    margin-left: 10px;
+.j-footer__copyright{
+    @media(max-width: 700px){
+        order: 2;
+        text-align: center;
+    }
+}
+
+.j-footer__email{
+    @include displayFlex(center, center, row);
+
+    img{
+        margin-right: 8px;
+    }
+
+    @media(max-width: 700px){
+        order: 1;
+        margin-bottom: 25px;
+        text-align: center;
+    }
 }

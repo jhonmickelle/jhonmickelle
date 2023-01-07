@@ -1,3 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: min(100% - 2rem, 1140px);
+    margin-inline: auto; //if you don't want to add margin top-bottom
+}
+
+
 .j-container{
     margin: 0px 165px;
     padding-right: 15px;
@@ -39,9 +49,9 @@
 }
 
 body{
-    background-image: url('/build/images/body-background.png');
-    background-size: contain;
-    background-repeat: repeat;
+    // background-image: url('/build/images/body-background.png');
+    // background-size: contain;
+    // background-repeat: repeat;
 }
 
 .j-button--resume{

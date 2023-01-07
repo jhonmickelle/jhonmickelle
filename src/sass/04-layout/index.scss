@@ -1,212 +1,273 @@
-// Header ~ Navigation
-.j-logo{
-    width: 40px;
-    height: 40px;
-}
-
-.j-container__navigation{
+.header{
     padding: 30px 0px;
     @include displayFlex(space-between, center, row);
-}
-
-.j-navigation__menu{
-    @include displayFlex(space-between, center, row);
-    list-style: none;
-}
-
-.j-navigation__menu--item{
-    list-style: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: $primary;
-    margin-right: 30px;
-    letter-spacing: 1px;
-    @include fontStyle($font-family, 16px, $medium);
-}
-
-// Top Page
-.j-top-page{
-    margin-top: 100px;
-    @include displayFlex(center, center, column);
-}
-
-.j-container__social{
-    margin-top: 30px;
-    @include displayFlex(flex-start, center, row);
-}
-
-.j-social__item{
-    box-shadow: $box-shadow;
-    padding: 15px;
-    border-radius: 5px;
-    background: $pure-white;
-    @include displayFlex(center, center, row);
-    transition: 200ms ease-in-out;
-
-    &:not(:last-child){
-        margin-right: 30px;
+    @media(max-width: 468px){
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 25px;
     }
+}
+
+.name-logo{
+    @include displayFlex(center, center, row);
+    a{
+        text-decoration: none;
+        color: $secondary;
+        letter-spacing: 1px;
+        @include fontStyle($font-family, 20px, $semi-bold);
+    }
+    span{
+        color: $primary;
+    }
+
+    @media(max-width: 468px){
+        width: 100%;
+        text-align: left;
+        justify-content: flex-start;
+    }
+}
+
+.navigation{
+    @include displayFlex(space-between, center, row);
+    gap: 50px;
+    list-style: none;
+}
+
+.navigation__item{
+    a{
+        text-decoration: none;
+        @include fontStyle($font-family, 16px, $medium);
+        letter-spacing: 1px;
+        color: $secondary;
+    }
+}
+
+.hero{
+    @include displayFlex(space-between, flex-start, row);
+    height: 80dvh;
+    padding-top: 10%;
+    position: relative;
+}
+
+.hero-right{
+    @include displayFlex(flex-end, center, row);
+}
+
+.social{
+    @include displayFlex(flex-end, center, row);
+    gap: 10px;
+}
+
+.hero-left{
+    @include displayFlex(center, flex-start, column);
+}
+
+.hero-name{
+    @include fontStyle($font-family, 24px, $regular);
+    color: $primary;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.hero-profession{
+    @include fontStyle($font-family, 42px, $medium);
+    color: $secondary;
+    letter-spacing: 0.5px;
+    margin-bottom: 50px;
+}
+
+.button__resume{
+    padding: 21px 37px;
+    border: 1px solid $secondary;
+    border-radius: 5px;
+    text-decoration: none;
+    color: $secondary;
+    display: inline-block;
+    @include fontStyle($font-family, 16px, $regular);
+    transition: ease-in-out 300ms;
 
     &:hover{
-        background: $primary;
-
-        .j-social__svg-path{
-            fill: $pure-white;
-        }
-    }
-}
-
-
-// Work
-.j-container__work{
-    margin: 100px 0px;
-
-    @media(max-width: 800px){
-        margin-bottom: 80px;
-    }
-}
-
-.j-work__item{
-    position: relative;
-    text-decoration: none;
-    @include displayFlex(center, center, column);
-
-    &:nth-child(1){
-        margin-top: 150px;
+        background: $secondary;
+        color: $white;
     }
 
-    &:nth-child(2){
-        margin-top: 150px;
-    }
-}
-
-.j-work__image-container{
-    position: absolute;
-    top: -20%;
-}
-
-.j-work__image{
-    width: 422px;
-    height: 315px;
-    border: 1px solid #f2f2f2;
-    border-radius: 5px;
-
-    @media(max-width: 520px){
-        width: 300px;
-        height: 215px;
-    }
-
-    @media(max-width: 520px){
-        width: 250px;
-        height: 215px;
-        object-fit: cover;
-    }
-}
-
-.j-work__description{
-    border-radius: 5px;
-    position: relative;
-    padding: 30px 30px;
-    height: 337px;
-    background: $pure-white;
-    box-shadow: $box-shadow;
-    @include displayFlex(space-between, flex-start, column);
-
-    @media(max-width: 420px){
-        height: 380px;
-    }
-}
-
-.j-work__role{
-    @include displayFlex(flex-start, center, row);
-}
-
-
-// Experience
-.j-container__experience-skill{
-    margin: 100px 0px;
-    @include displayFlex(center, flex-start, row);
-
-    @media(max-width: 800px){
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
-}
-
-.j-container__experience{
-    border-right: 1px solid #C4C4C4;
-    margin-right: 50px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-
-    @media(max-width: 800px){
-        flex-direction: column;
-        border-right: none;
-        display: flex;
-        border-bottom: 1px solid #C4C4C4;
-        padding-bottom: 30px;
-        margin-right: 0px;
-        padding-right: 0px;
+    @media(max-width: 468px){
+        @include displayFlex(center, center, column);
         width: 100%;
-        align-items: center;
     }
 }
 
+.work{
+    margin-bottom: 100px;
+    padding: 50px 0;
+    background: #f2f2f2;
+}
 
-.j-container__skill{
-    @media(max-width: 800px){
-        margin-bottom: 80px;
-        margin-top: 30px;
+.title{
+    color: $primary;
+    @include fontStyle($font-family, 24px, $semi-bold);
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+}
+
+.work__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    @media(max-width: 768px){
+        gap: 30px
+    }
+
+    @media(max-width: 568px){
+        grid-template-columns: 1fr;
     }
 }
 
-.j-experience__list{
-    list-style: none;
-    margin-top: 20px;
+.work__desc{
+    display: none;
 }
 
-.j-experience__item{
-    @include displayFlex(flex-start, center, row);
+.work-item{
+    position: relative;
+    background: $pure-white;
+    padding: 30px;
+    border: 1px solid #f2f2f2;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    transition: ease-in-out 300ms;
 
     img{
-        margin-right: 10px;
+        width: 100%;
+        object-fit: cover;
     }
 
-    &:not(:last-child){
-        margin-bottom: 10px;
+    &:hover .work__desc{
+        @include displayFlex(center, center, column);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: rgba(79, 79, 79, 0.7);
+        border-radius: 5px;
+
+        color: $pure-white;
+        text-decoration: none;
+        gap: 20px;
+        @include fontStyle($font-family, 20px, $semi-bold);
     }
 }
 
-// Hire Me
-.j-container__hire{
-    @include displayFlex(flex-start, center, column);
+.work__name{
+    color: $pure-white;
+    @include fontStyle($font-family, 24px, $semi-bold);
+}
+
+.work__role{
+    max-width: 70%;
+    text-align: center;
 }
 
 
-// Footer
-footer{
-    background: $primary;
+
+.skills{
+    margin-bottom: 100px;
+}
+
+.skill__wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    gap: 30px;
+
+    @media(max-width: 768px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(max-width: 568px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.skill__item{
+    width: 100%;
+    background: $pure-white;
     padding: 30px 0px;
-    margin-top: 80px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    @include displayFlex(center, center, column);
+    gap: 20px;
+    color: $secondary;
+    letter-spacing: 0.5px;
+    @include fontStyle($font-family, 16px, $semi-bold);
+}
 
-    @media(max-width: 700px){
-        padding: 20px 0px;
+.about{
+    position: relative;
+}
+
+.footer__wrapper{
+    @include displayFlex(flex-start, center, row);
+    gap: 30px;
+
+    @media(max-width: 768px){
+        flex-direction: column;
+        justify-content: flex-start;
     }
 }
 
-.j-footer__wrapper{
+.about__img-wrapper{
+    width: 100%;
+
+    @media(max-width: 768px){
+        @include displayFlex(flex-start, center, row);
+    }
+}
+
+.footer__name{
+    color: $primary;
+    @include fontStyle($font-family, 24px, $medium);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.footer__about{
+    color: $black;
+    @include fontStyle($font-family, 16px, $light);
+    margin-bottom: 40px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+}
+
+.copy{
+    color: $primary;
+    letter-spacing: 0.5px;
+    @include fontStyle($font-family, 14px, $regular);
+}
+
+.footer__copy{
+    padding: 40px 0px;
     @include displayFlex(space-between, center, row);
 
-    @media(max-width: 700px){
+    @media(max-width: 768px){
         flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 }
 
-.j-hire__button{
-    @media(max-width: 500px){
-        width: 100%;
-        text-align: center;
-    }
+.footer--email{
+    @include displayFlex(flex-start, center, row);
+    gap: 7px;
+    color: $secondary;
+    @include fontStyle($font-family, 14px, $regular);
+    
+}
+
+.footer__bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
 }

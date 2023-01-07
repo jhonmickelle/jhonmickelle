@@ -1,0 +1,49 @@
+.fj-primary,
+.fj-secondary,
+.fj-white,
+.fj-black{
+    height: 100px;
+    background: #4F592A;
+    padding: 15px;
+    border-radius: 5px;
+    color: $pure-white;
+    letter-spacing: 0.5px;
+    @include displayFlex(flex-start, flex-end, row);
+    @include fontStyle($font-family, 16px, $regular);
+}
+
+.fj-primary{
+    background: #FA4094;
+}
+
+.fj-secondary{
+    background: #293153;
+}
+
+.fj-white{
+    border: 1px solid $white;
+    background: $pure-white;
+    color: $black;
+}
+
+.fj-black{
+    background: #222222;
+}
+
+.fj-screen__wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    @media(max-width: 568px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: 375px){
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,34 @@
+.project--design{
+    margin-bottom: 20px;
+}
+
+.project--desc{
+    margin-bottom: 40px;
+    color: $secondary;
+    @include fontStyle($font-family, 14px, $regular);
+    line-height: 22px;
+}
+
+.radio-checkbox{
+    @include displayFlex(flex-start, center, row);
+    gap: 50px;
+
+    img{
+        width: auto;
+        height: auto;
+        object-fit: cover;
+
+        @media(max-width: 568px){
+            width: 100%;
+        }
+    }
+
+    @media(max-width: 768px){
+        flex-direction: column;
+    }
+}
+
+// .mockup__container{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+// }

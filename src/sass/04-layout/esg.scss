@@ -1,0 +1,171 @@
+.project{
+    @include displayFlex(flex-start, flex-start, row);
+    gap: 30px;
+    @media(max-width: 868px){
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    img{
+        @media(max-width: 568px){
+            width: 100%;
+        }
+    }
+}
+
+.project__overview{
+    height: 100%;
+    padding: 30px 0;
+
+    @media(max-width: 868px){
+        padding: 20px 0;
+    }
+}
+
+.project--name{
+    color: $primary;
+    letter-spacing: 1px;
+    @include fontStyle($font-family, 32px, $bold);
+    margin-bottom: 40px;
+}
+
+.project--role,
+.project--tool{
+    color: $black;
+    letter-spacing: 0.5px;
+    @include fontStyle($font-family, 16px, $regular);
+    margin-bottom: 20px;
+
+    span{
+        font-weight: $bold;
+    }
+}
+
+.project__foundation{
+    margin-top: 50px;
+}
+
+.project__color-typo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @media(max-width: 768px){
+        grid-template-columns: 1fr;
+    }
+}
+
+.typography{
+    color: $black;
+    @include fontStyle($font-family, 40px, $bold);
+    @include displayFlex(center, flex-start, column);
+}
+
+.typography--title{
+    color: $black;
+    @include fontStyle($font-family, 12px, $regular);
+}
+
+.typo-heading{
+    margin-bottom: 30px;
+}
+
+.project__color{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.esg-primary,
+.esg-secondary,
+.esg-white,
+.esg-black{
+    height: 100px;
+    background: #4F592A;
+    padding: 15px;
+    border-radius: 5px;
+    color: $pure-white;
+    letter-spacing: 0.5px;
+    @include displayFlex(flex-start, flex-end, row);
+    @include fontStyle($font-family, 16px, $regular);
+}
+
+.esg-primary{
+    background: #4F592A;
+}
+
+.esg-secondary{
+    background: #A67A6A;
+}
+
+.esg-white{
+    border: 1px solid $white;
+    background: $pure-white;
+    color: $black;
+}
+
+.esg-black{
+    background: #0D0D0D;
+}
+
+.esg-mockup{
+    margin-top: 100px;
+
+    h2{
+        margin-bottom: 50px;
+    }
+
+    @media(max-width: 868px){
+        margin-top: 50px;
+    }
+}
+
+.mockup__wrapper{
+    width: 100%;
+    margin-bottom: 50px;
+
+    h3{
+        color: $secondary;
+        @include fontStyle($font-family, 16px, $semi-bold);
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    img{
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+
+        @media(max-width: 768px){
+            width: 100%;
+        }
+    }
+}
+
+.button_wrapper{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    @include displayFlex(center, center, row);
+}
+
+.text-info{
+    color: $secondary;
+    @include fontStyle($font-family, 14px, $regular);
+}
+
+.button__other{
+    padding: 21px 37px;
+    border: 1px solid $secondary;
+    border-radius: 5px;
+    text-decoration: none;
+    color: $white;
+    display: inline-block;
+    background: $secondary;
+    @include fontStyle($font-family, 16px, $regular);
+    transition: ease-in-out 300ms;
+
+    &:hover{
+        background: $pure-white;
+        color: $secondary;
+    }
+}
